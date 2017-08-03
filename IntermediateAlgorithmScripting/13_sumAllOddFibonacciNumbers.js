@@ -11,7 +11,6 @@ sumFibs(75024) should return 60696.
 sumFibs(75025) should return 135721.
 */
 function sumFibs(number) {
-
     //variables to run the Fibonacci series
     var previous_first = 0; 
     previous_second = 1;
@@ -21,22 +20,16 @@ function sumFibs(number) {
     sum = 0;
 
     //for loop to generate the Fibonacci series
-
     for(var i = 2; i <= number; i++) {
-       
         next = previous_first + previous_second;
         previous_first = previous_second;
         previous_second = next;
         
         if (next%2 !== 0 && next <= number){ // selecting only odd numbers
         	arr.push(next);
-        }
-               
+        }         
     }
-   
     sum = arr.reduce(function(a, b) { return a + b; }, 0); // sum of all items in array
-    console.log(arr);
- 
     return sum;
 }
 //Test
